@@ -15,6 +15,7 @@
         "intervention/image": "^2.7",
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^2.5",
         "razorpay/razorpay": "^2.8"
     },
     "require-dev": {

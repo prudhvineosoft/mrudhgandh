@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Content;
+use App\Http\Controllers\Auth\LoginController;
 use App\UserInquiries;
 use Mail;
 
@@ -20,6 +21,8 @@ class ContentsController extends Controller
     {
         if ($slug == 'contact-us') {
             return $this->contactUs();
+        } elseif ($slug == 'login') {
+            return view('auth.login');
         } else {
             $content = Content::where('slug', $slug)->first();
             return view('contents.index', compact('content'));
